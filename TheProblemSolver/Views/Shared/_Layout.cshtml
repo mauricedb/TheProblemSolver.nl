@@ -25,7 +25,7 @@
         <div id="tray">
 
             <ul class="box">
-                <li id="tray-active"><a href="#">@Html.ActionLink("Homepage", "Index", "Home")</a></li>
+                <li><a href="#">@Html.ActionLink("Home", "Index", "Home")</a></li>
                 <!-- Active page -->
                 <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
             </ul>
@@ -57,20 +57,20 @@
 
                 @if (IsSectionDefined("contentRight"))
                 {
-                    @RenderSection("contentRight");
+                    @RenderSection("contentRight")
                 }
                 else
                 { 
                     <hr class="noscreen" />
                     <div id="content-right">
 
-                        <!-- Ads 125x125 -->
+                        @*                        <!-- Ads 125x125 -->
                         <div class="box">
                             <span class="f-right"><a href="#">
                                 <img src="~/tmp/125x125.gif" width="125" height="125" alt="" /></a></span>
                             <span class="f-left"><a href="#">
                                 <img src="~/tmp/125x125.gif" width="125" height="125" alt="" /></a></span>
-                        </div>
+                        </div>*@
 
                         <!-- News -->
                         <div class="box-01-top"></div>
@@ -122,11 +122,28 @@
                                     Lorem ipsum dolor sit, consectetuer ad. Duisa eros. Nunc imperdiet, lacus quas posule accumsan, elita nunc eleifendel augue id uipera enim augue id eros.</dd>
                             </dl>
 
+                            <div class="bg">
+                                <dl class="news box">
+                                    <dt>SEP<br />
+                                        <span>23</span></dt>
+                                    <dd><span>15:34</span><br />
+                                        Lorem ipsum dolor sit, consectetuer ad. Duisa eros. Nunc imperdiet, lacus quas posule accumsan, elita nunc eleifendel augue id uipera enim augue id eros.</dd>
+                                </dl>
+                            </div>
+                            <!-- /bg -->
+
+                            <dl class="news box">
+                                <dt>SEP<br />
+                                    <span>23</span></dt>
+                                <dd><span>15:34</span><br />
+                                    Lorem ipsum dolor sit, consectetuer ad. Duisa eros. Nunc imperdiet, lacus quas posule accumsan, elita nunc eleifendel augue id uipera enim augue id eros.</dd>
+                            </dl>
+
                         </div>
                         <!-- /box-01 -->
                         <div class="box-01-bottom"></div>
 
-                        <!-- Most readed articles -->
+                        @*                        <!-- Most readed articles -->
                         <div class="box-02-top"></div>
                         <div class="box-02-top-b box">
                             <span class="f-left"><strong>Most readed articles</strong></span>
@@ -144,7 +161,7 @@
 
                         </div>
                         <!-- /box-02 -->
-                        <div class="box-02-bottom"></div>
+                        <div class="box-02-bottom"></div>*@
 
                     </div>
                     <!-- /content-right -->
@@ -198,8 +215,7 @@
                     <h4 class="margin">RSS feeds:</h4>
 
                     <p class="nom">
-                        <a href="#" class="rss">Articles</a><br />
-                        <a href="#" class="rss">Comments</a>
+                        <a href="http://msmvps.com/blogs/theproblemsolver/rss.aspx" class="rss">Articles</a><br />
                     </p>
 
                     <h4 class="margin">Search:</h4>
@@ -238,42 +254,12 @@
     </div>
     <!-- /main -->
 
+    @Scripts.Render("~/bundles/jquery")
+    <script>
+        $(function () {
+            $('a[href="' + location.pathname + '"]').closest('li').attr('id', 'tray-active');
+        });
+    </script>
+    @RenderSection("scripts", required: false)
 </body>
-@*    <body>
-        <header>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>
-                </div>
-                <div class="float-right">
-                    <section id="login">
-                        @Html.Partial("_LoginPartial")
-                    </section>
-                    <nav>
-                        <ul id="menu">
-                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("About", "About", "Home")</li>
-                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
-        <div id="body">
-            @RenderSection("featured", required: false)
-            <section class="content-wrapper main-content clear-fix">
-                @RenderBody()
-            </section>
-        </div>
-        <footer>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
-                </div>
-            </div>
-        </footer>
-
-        @Scripts.Render("~/bundles/jquery")
-        @RenderSection("scripts", required: false)
-    </body>*@
 </html>

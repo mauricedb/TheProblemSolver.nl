@@ -26,6 +26,8 @@
 body {
 	background: url("design/bg.gif") 50% 0 repeat-y;
 	font: 0.8em/1.5 "arial", sans-serif;
+	overflow: -moz-scrollbars-vertical;
+	overflow-y: scroll;
 }
 
 a {
