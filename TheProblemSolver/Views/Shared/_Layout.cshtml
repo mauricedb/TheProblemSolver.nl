@@ -25,16 +25,9 @@
         <div id="tray">
 
             <ul class="box">
-                <li id="tray-active"><a href="#">Homepage</a></li>
+                <li id="tray-active"><a href="#">@Html.ActionLink("Homepage", "Index", "Home")</a></li>
                 <!-- Active page -->
-                <li><a href="#">Category</a></li>
-                <li><a href="#">Category</a></li>
-                <li><a href="#">Category</a></li>
-                <li><a href="#">Category</a></li>
-                <li><a href="#">Category</a></li>
-                <li><a href="#">Category</a></li>
-                <li><a href="#">Category</a></li>
-                <li><a href="#">Category</a></li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
             </ul>
 
             <hr class="noscreen" />
@@ -51,9 +44,6 @@
 
                     @RenderSection("featured", required: false)
 
-                    <!-- /topstory-list -->
-                    <div id="topstory-bottom"></div>
-
                     <hr class="noscreen" />
 
                     <div id="content-left-in">
@@ -64,98 +54,105 @@
                 </div>
                 <!-- /content-left -->
 
-                <hr class="noscreen" />
 
-                <div id="content-right">
+                @if (IsSectionDefined("contentRight"))
+                {
+                    @RenderSection("contentRight");
+                }
+                else
+                { 
+                    <hr class="noscreen" />
+                    <div id="content-right">
 
-                    <!-- Ads 125x125 -->
-                    <div class="box">
-                        <span class="f-right"><a href="#">
-                            <img src="tmp/125x125.gif" width="125" height="125" alt="" /></a></span>
-                        <span class="f-left"><a href="#">
-                            <img src="tmp/125x125.gif" width="125" height="125" alt="" /></a></span>
-                    </div>
+                        <!-- Ads 125x125 -->
+                        <div class="box">
+                            <span class="f-right"><a href="#">
+                                <img src="~/tmp/125x125.gif" width="125" height="125" alt="" /></a></span>
+                            <span class="f-left"><a href="#">
+                                <img src="~/tmp/125x125.gif" width="125" height="125" alt="" /></a></span>
+                        </div>
 
-                    <!-- News -->
-                    <div class="box-01-top"></div>
-                    <div class="box-01-top-b box">
-                        <span class="f-right">Updated: 15.7.2008  15:34</span>
-                        <span class="f-left"><strong>News</strong></span>
-                    </div>
-                    <!-- /box-01-top-b -->
-                    <div class="box-01">
+                        <!-- News -->
+                        <div class="box-01-top"></div>
+                        <div class="box-01-top-b box">
+                            <span class="f-right">Updated: 15.7.2008  15:34</span>
+                            <span class="f-left"><strong>News</strong></span>
+                        </div>
+                        <!-- /box-01-top-b -->
+                        <div class="box-01">
 
-                        <dl class="news box">
-                            <dt>SEP<br />
-                                <span>23</span></dt>
-                            <dd><span>15:34</span><br />
-                                Lorem ipsum dolor sit, consectetuer ad. Duisa eros. Nunc imperdiet, lacus quas posule accumsan, elita nunc eleifendel augue id uipera enim augue id eros.</dd>
-                        </dl>
-
-                        <div class="bg">
                             <dl class="news box">
                                 <dt>SEP<br />
                                     <span>23</span></dt>
                                 <dd><span>15:34</span><br />
                                     Lorem ipsum dolor sit, consectetuer ad. Duisa eros. Nunc imperdiet, lacus quas posule accumsan, elita nunc eleifendel augue id uipera enim augue id eros.</dd>
                             </dl>
-                        </div>
-                        <!-- /bg -->
 
-                        <dl class="news box">
-                            <dt>SEP<br />
-                                <span>23</span></dt>
-                            <dd><span>15:34</span><br />
-                                Lorem ipsum dolor sit, consectetuer ad. Duisa eros. Nunc imperdiet, lacus quas posule accumsan, elita nunc eleifendel augue id uipera enim augue id eros.</dd>
-                        </dl>
+                            <div class="bg">
+                                <dl class="news box">
+                                    <dt>SEP<br />
+                                        <span>23</span></dt>
+                                    <dd><span>15:34</span><br />
+                                        Lorem ipsum dolor sit, consectetuer ad. Duisa eros. Nunc imperdiet, lacus quas posule accumsan, elita nunc eleifendel augue id uipera enim augue id eros.</dd>
+                                </dl>
+                            </div>
+                            <!-- /bg -->
 
-                        <div class="bg">
                             <dl class="news box">
                                 <dt>SEP<br />
                                     <span>23</span></dt>
                                 <dd><span>15:34</span><br />
                                     Lorem ipsum dolor sit, consectetuer ad. Duisa eros. Nunc imperdiet, lacus quas posule accumsan, elita nunc eleifendel augue id uipera enim augue id eros.</dd>
                             </dl>
+
+                            <div class="bg">
+                                <dl class="news box">
+                                    <dt>SEP<br />
+                                        <span>23</span></dt>
+                                    <dd><span>15:34</span><br />
+                                        Lorem ipsum dolor sit, consectetuer ad. Duisa eros. Nunc imperdiet, lacus quas posule accumsan, elita nunc eleifendel augue id uipera enim augue id eros.</dd>
+                                </dl>
+                            </div>
+                            <!-- /bg -->
+
+                            <dl class="news box">
+                                <dt>SEP<br />
+                                    <span>23</span></dt>
+                                <dd><span>15:34</span><br />
+                                    Lorem ipsum dolor sit, consectetuer ad. Duisa eros. Nunc imperdiet, lacus quas posule accumsan, elita nunc eleifendel augue id uipera enim augue id eros.</dd>
+                            </dl>
+
                         </div>
-                        <!-- /bg -->
+                        <!-- /box-01 -->
+                        <div class="box-01-bottom"></div>
 
-                        <dl class="news box">
-                            <dt>SEP<br />
-                                <span>23</span></dt>
-                            <dd><span>15:34</span><br />
-                                Lorem ipsum dolor sit, consectetuer ad. Duisa eros. Nunc imperdiet, lacus quas posule accumsan, elita nunc eleifendel augue id uipera enim augue id eros.</dd>
-                        </dl>
+                        <!-- Most readed articles -->
+                        <div class="box-02-top"></div>
+                        <div class="box-02-top-b box">
+                            <span class="f-left"><strong>Most readed articles</strong></span>
+                        </div>
+                        <!-- /box-02-top-b -->
+                        <div class="box-02 box">
 
-                    </div>
-                    <!-- /box-01 -->
-                    <div class="box-01-bottom"></div>
+                            <ul class="mostreaded">
+                                <li><span class="f-right">1925&times</span><a href="#">Lomem ipsum dolor sit amet</a></li>
+                                <li><span class="f-right">1925&times</span><a href="#">Lomem ipsum dolor sit amet</a></li>
+                                <li><span class="f-right">1925&times</span><a href="#">Lomem ipsum dolor sit amet</a></li>
+                                <li><span class="f-right">1925&times</span><a href="#">Lomem ipsum dolor sit amet</a></li>
+                                <li><span class="f-right">1925&times</span><a href="#">Lomem ipsum dolor sit amet</a></li>
+                            </ul>
 
-                    <!-- Most readed articles -->
-                    <div class="box-02-top"></div>
-                    <div class="box-02-top-b box">
-                        <span class="f-left"><strong>Most readed articles</strong></span>
-                    </div>
-                    <!-- /box-02-top-b -->
-                    <div class="box-02 box">
-
-                        <ul class="mostreaded">
-                            <li><span class="f-right">1925&times</span><a href="#">Lomem ipsum dolor sit amet</a></li>
-                            <li><span class="f-right">1925&times</span><a href="#">Lomem ipsum dolor sit amet</a></li>
-                            <li><span class="f-right">1925&times</span><a href="#">Lomem ipsum dolor sit amet</a></li>
-                            <li><span class="f-right">1925&times</span><a href="#">Lomem ipsum dolor sit amet</a></li>
-                            <li><span class="f-right">1925&times</span><a href="#">Lomem ipsum dolor sit amet</a></li>
-                        </ul>
+                        </div>
+                        <!-- /box-02 -->
+                        <div class="box-02-bottom"></div>
 
                     </div>
-                    <!-- /box-02 -->
-                    <div class="box-02-bottom"></div>
-
-                </div>
-                <!-- /content-right -->
-
+                    <!-- /content-right -->
+                }
                 <hr class="noscreen" />
             </div>
             <!-- /content -->
+
 
             <!-- Aside -->
             <div id="aside">
@@ -169,7 +166,7 @@
                 <!-- /padding -->
 
                 <ul class="nav">
-@*                    <li id="nav-active"><a href="#">Active category</a>
+                    @*                    <li id="nav-active"><a href="#">Active category</a>
                         <!-- Active -->
                         <ul>
                             <li><a href="#">Subcategory</a></li>
@@ -187,7 +184,7 @@
                         </ul>
 
                     </li>
-                    <li><a href="#">Some category</a></li>
+                    <li>@Html.ActionLink("Presentations", "Presentations", "Home")</li>
                     <li><a href="#">Some category</a></li>
                     <li><a href="#">Some category</a></li>
                     <li><a href="#">Some category</a></li>
