@@ -174,12 +174,12 @@
             <!-- Aside -->
             <div id="aside">
 
-                <div id="aside-top"></div>
+                @*<div id="aside-top"></div>*@
 
-                <!-- Categories -->
+@*                <!-- Categories -->
                 <div class="padding">
                     <h4 class="nom">Categories:</h4>
-                </div>
+                </div>*@
                 <!-- /padding -->
 
                 <ul class="nav">
@@ -193,6 +193,13 @@
                             <li><a href="#">Subcategory</a></li>
                         </ul>
                     </li>*@
+                    <li id="nav-active"><a href="#">Publications</a>
+                        <ul>
+                            <li>@Html.ActionLink("Presentations", "Presentations", "Home")</li>
+                            <li><a href="http://msmvps.com/blogs/theproblemsolver/" target="_blank">Blog</a></li>
+                            <li><a href="http://dotned.nl/PodCasts.aspx" target="_blank">Podcasts</a></li>
+                        </ul>
+                    </li>
                     <li id="nav-active"><a href="#">Other Web Sites</a>
                         <ul>
                             <li><a href="http://html5support.nl/" target="_blank">HTML5 Support</a></li>
@@ -201,12 +208,14 @@
                         </ul>
 
                     </li>
-                    <li>@Html.ActionLink("Presentations", "Presentations", "Home")</li>
-                    <li><a href="#">Some category</a></li>
-                    <li><a href="#">Some category</a></li>
-                    <li><a href="#">Some category</a></li>
-                    <li><a href="#">Some category</a></li>
-                    <li><a href="#">Some category</a></li>
+                    <li id="nav-active"><a href="#">Other links</a>
+                        <ul>
+                            <li><a href="http://dotned.nl/PodCasts.aspx" target="_blank">Linkedin</a></li>
+                            <li><a href="http://dotned.nl/PodCasts.aspx" target="_blank">StackOverflow</a></li>
+                            <li><a href="http://dotned.nl/PodCasts.aspx" target="_blank">GitHub</a></li>
+                            <li><a href="http://dotned.nl/PodCasts.aspx" target="_blank">Twitter</a></li>
+                        </ul>
+                    </li>
                 </ul>
 
                 <!-- RSS feeds -->
