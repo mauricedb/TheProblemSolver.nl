@@ -1,0 +1,30 @@
+﻿@model IEnumerable<TheProblemSolver.Models.Presentation>
+
+@{
+    ViewBag.Title = "Presentations";
+}
+
+<h2>Presentations</h2>
+
+<div>
+    @foreach (var item in Model)
+    {
+
+        <div class="article box">
+            <div class="article-img">
+                <a href="@item.Link" target="_blank"><img src="@item.ImageUrl" alt="@item.Title"></a>
+            </div>
+            <!-- /article-img -->
+            <div class="article-desc">
+                <h3><a href="@item.Link" target="_blank">@Html.DisplayFor(modelItem => item.Title)</a></h3>
+                <p class="info">Published: <strong>@item.PublicationDate.ToShortDateString()</strong></p>
+                <p class="nomb">@Html.Raw(item.Description)</p>
+            </div>
+        </div>
+    }
+</div>
+
+
+
+@section contentRight {
+}
