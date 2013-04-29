@@ -4,6 +4,17 @@
     ViewBag.Title = "Presentations";
 }
 
+<style>
+    #content-left {
+        float: left;
+        width: inherit;
+    }
+
+    .article .article-desc {
+        float: right;
+        width: 540px;
+    }
+</style>
 <h2>Presentations</h2>
 
 <div>
@@ -12,7 +23,8 @@
 
         <div class="article box">
             <div class="article-img">
-                <a href="@item.Link" target="_blank"><img src="@item.ImageUrl" alt="@item.Title"></a>
+                <a href="@item.Link" target="_blank">
+                    <img src="@item.ImageUrl" alt="@item.Title"></a>
             </div>
             <!-- /article-img -->
             <div class="article-desc">
