@@ -26,11 +26,5 @@ namespace TheProblemSolver.Controllers
         {
             return View();
         }
-
-        public ActionResult Presentations()
-        {
-            return View();
-        }
-
     }
 }
