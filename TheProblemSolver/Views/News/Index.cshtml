@@ -1,0 +1,19 @@
+﻿@model IEnumerable<TheProblemSolver.Models.NewsItem>
+@{
+    int i = 0;
+}
+
+<div class="box-01">
+    @foreach (var item in Model)
+    {
+        <dl class="news box @(i++ % 2 == 0 ? "" : "bg")">
+            <dt>@item.Date.ToString("MMM")<br />
+                <span>@item.Date.Day</span></dt>
+            <dd><span>@item.Date.ToShortTimeString()</span><br />
+                @Html.Raw(item.Description)</dd>
+        </dl>
+    }
+</div>
+
+
+
