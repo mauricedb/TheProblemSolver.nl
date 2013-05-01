@@ -356,6 +356,7 @@
     <Content Include="Views\News\Index.cshtml" />
     <Content Include="Views\Blog\Recent.cshtml" />
     <Content Include="Views\Blog\TopStory.cshtml" />
+    <Content Include="Views\Home\Test.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
