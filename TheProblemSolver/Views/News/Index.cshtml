@@ -9,7 +9,7 @@
         <dl class="news box @(i++ % 2 == 0 ? "" : "bg")">
             <dt>@item.Date.ToString("MMM")<br />
                 <span>@item.Date.Day</span></dt>
-            <dd><span>@item.Date.ToShortTimeString()</span><br />
+            <dd><span>@item.Date.ToLocalTime().ToShortTimeString()</span><br />
                 @Html.Raw(item.Description)</dd>
         </dl>
     }

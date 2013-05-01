@@ -193,8 +193,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Models\BlogItem.cs" />
     <Compile Include="Models\NewsItem.cs" />
     <Compile Include="Controllers\PresentationsController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
@@ -309,7 +311,9 @@
     <Content Include="tmp\105x75.gif" />
     <Content Include="tmp\125x125.gif" />
     <Content Include="tmp\180x135.gif" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -350,6 +354,8 @@
     <Content Include="Views\Shared\Copy of _Layout.cshtml" />
     <Content Include="Views\Presentations\Index.cshtml" />
     <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\Blog\Recent.cshtml" />
+    <Content Include="Views\Blog\TopStory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

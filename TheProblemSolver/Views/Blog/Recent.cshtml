@@ -1,0 +1,36 @@
+﻿@model IEnumerable<TheProblemSolver.Models.BlogItem>
+
+@{
+    ViewBag.Title = "Recent articles";
+}
+
+<style>
+    /*#content-left {
+        float: left;
+        width: inherit;
+    }*/
+
+    .article .article-desc {
+        /*float: right;*/
+        width: inherit;
+    }
+</style>
+
+<!-- Recent Articles -->
+<h3 class="title">Recent articles</h3>
+
+
+@foreach (var item in Model)
+{
+    <!-- Article -->
+    <div class="article box">
+        <div class="article-desc">
+            <h3><a href="@item.Uri">@item.Title</a></h3>
+            <p class="info">Published: <strong>@item.Date.ToShortDateString()</strong></p>
+            <p class="nomb">Lorem ipsum dolor sitae amet, consectetuer ad. Duisa eros. Nunc imperdiet, lacus quias posule accumsan, elita nunc eleifend augue id uipera enim augue id eros. Etiam justo.</p>
+        </div>
+    </div>
+    <!-- /article -->
+}
+
+<p class="t-right"><a href="#" class="more">Older articles</a></p>
