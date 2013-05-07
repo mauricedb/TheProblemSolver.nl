@@ -74,6 +74,5 @@ namespace TheProblemSolver.Controllers
 
             return feed;
         }
-
     }
 }

@@ -50,6 +50,9 @@
     <Reference Include="Argotic.Extensions">
       <HintPath>..\..\NuGet Packages\Argotic.Extensions.2008.0.2.0\lib\Net35\Argotic.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\..\NuGet Packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -195,6 +198,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HtmlToText.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Models\BlogItem.cs" />
     <Compile Include="Models\NewsItem.cs" />

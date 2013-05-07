@@ -27,7 +27,8 @@
         <div class="article-desc">
             <h3><a href="@item.Uri">@item.Title</a></h3>
             <p class="info">Published: <strong>@item.Date.ToShortDateString()</strong></p>
-            <p class="nomb">Lorem ipsum dolor sitae amet, consectetuer ad. Duisa eros. Nunc imperdiet, lacus quias posule accumsan, elita nunc eleifend augue id uipera enim augue id eros. Etiam justo.</p>
+            @*<p class="nomb">Lorem ipsum dolor sitae amet, consectetuer ad. Duisa eros. Nunc imperdiet, lacus quias posule accumsan, elita nunc eleifend augue id uipera enim augue id eros. Etiam justo.</p>*@
+            <p class="nomb">@item.ShortDescription</p>
         </div>
     </div>
     <!-- /article -->
