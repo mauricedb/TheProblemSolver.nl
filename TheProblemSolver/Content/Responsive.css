@@ -1,0 +1,26 @@
+﻿@media (min-width: 1200px) {
+    body {
+        background: url("design/bg-1200.gif") 50% 0 repeat-y;
+    }
+
+    #main {
+        width: 1140px;
+    }
+
+    #tray {
+        background: url("design/tray-1200.gif") 0 100% no-repeat;
+    }
+
+    #header {
+        width: 1140px;
+        background: url("design/header-1200.gif") 0 0 no-repeat;
+    }
+
+    #content {
+        width: 940px;
+    }
+
+    #content-left {
+        width: 670px;
+    }
+}

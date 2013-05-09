@@ -215,6 +215,7 @@
     <Content Include="Content\design\arrow.gif" />
     <Content Include="Content\design\aside-bottom.gif" />
     <Content Include="Content\design\aside-top.gif" />
+    <Content Include="Content\design\bg-1200.gif" />
     <Content Include="Content\design\bg.gif" />
     <Content Include="Content\design\box-01-bottom.gif" />
     <Content Include="Content\design\box-01-top-b.gif" />
@@ -227,6 +228,7 @@
     <Content Include="Content\design\cols.gif" />
     <Content Include="Content\design\dot.gif" />
     <Content Include="Content\design\footer.gif" />
+    <Content Include="Content\design\header-1200.gif" />
     <Content Include="Content\design\header.gif" />
     <Content Include="Content\design\nav-active.gif" />
     <Content Include="Content\design\nav-link.gif" />
@@ -234,12 +236,14 @@
     <Content Include="Content\design\rss.gif" />
     <Content Include="Content\design\topstory-bottom.gif" />
     <Content Include="Content\design\topstory-top.gif" />
+    <Content Include="Content\design\tray-1200.gif" />
     <Content Include="Content\design\tray-separator.gif" />
     <Content Include="Content\design\tray.gif" />
     <Content Include="Content\main-msie.css" />
     <Content Include="Content\main.css" />
     <Content Include="Content\print.css" />
     <Content Include="Content\reset.css" />
+    <Content Include="Content\Responsive.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
