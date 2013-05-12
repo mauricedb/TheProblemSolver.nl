@@ -72,9 +72,9 @@ h3.title {
         color: #FFF;
     }
 
-    #tray li#tray-active a {
-        color: #21C8FE;
-    }
+li#tray-active a {
+    color: #21C8FE !important;
+}
 
 .nav a {
     border-top: 1px solid #e5e5e5;
@@ -87,10 +87,15 @@ h3.title {
     color: #FFF !important;
 }
 
+.nav li#tray-active a {
+    color: #21C8FE !important;
+}
+
+
 .nav #nav-active ul li a {
     border-top: 1px solid #525252;
     background-color: #2f2f2f !important;
-    color: #21c8fe !important;
+    /*color: #21c8fe !important;*/
 }
 
 #search {
@@ -179,3 +184,9 @@ h3.title {
 .rss {
     color: #000;
 }
+
+/*.page-active {
+    color: #21c8fe !important;
+    text-decoration: none !important;
+    font-weight: bold;
+}*/
