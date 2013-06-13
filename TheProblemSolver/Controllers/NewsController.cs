@@ -12,11 +12,16 @@ namespace TheProblemSolver.Controllers
     {
         //
         // GET: /News/
-        [OutputCache(Duration = 15 * 60)]
+        //[OutputCache(Duration = 15 * 60)]
+        //public ActionResult Index()
+        //{
+        //    var news = GetTwitterFeed();
+        //    return PartialView(news);
+        //}
+
         public ActionResult Index()
         {
-            var news = GetTwitterFeed();
-            return PartialView(news);
+            return PartialView();
         }
 
         private static List<NewsItem> _news;

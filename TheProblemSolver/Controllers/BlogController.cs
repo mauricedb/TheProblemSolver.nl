@@ -74,8 +74,10 @@ namespace TheProblemSolver.Controllers
         private static RssFeed GetRssFeed()
         {
 
-            var settings = new SyndicationResourceLoadSettings();
-            settings.RetrievalLimit = 9;
+            var settings = new SyndicationResourceLoadSettings
+            {
+                RetrievalLimit = 9
+            };
 
             var feedUrl = new Uri("http://msmvps.com/blogs/theproblemsolver/rss.aspx");
             var feed = RssFeed.Create(feedUrl, settings);
