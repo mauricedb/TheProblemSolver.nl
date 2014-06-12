@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using Argotic.Common;
 using Argotic.Extensions.Core;
@@ -10,19 +9,23 @@ using TheProblemSolver.Models;
 
 namespace TheProblemSolver.Controllers
 {
+#if !DEBUG
+    [OutputCache(Duration = 15 * 60)]
+#endif
     public class PresentationsController : Controller
     {
         //
         // GET: /Presentations/
 
+        private static List<Presentation> _presentations;
+
         public ActionResult Index()
         {
-            var presentations = GetPresentations();
+            List<Presentation> presentations = GetPresentations();
 
             return View(presentations);
         }
 
-        private static List<Presentation> _presentations;
         private static List<Presentation> GetPresentations()
         {
             if (_presentations == null)
@@ -35,13 +38,13 @@ namespace TheProblemSolver.Controllers
         private static List<Presentation> GetPresentationsFromWeb()
         {
             var presentations = new List<Presentation>();
-            var feed = GetRssFeed();
+            RssFeed feed = GetRssFeed();
 
-            foreach (var item in feed.Channel.Items)
+            foreach (RssItem item in feed.Channel.Items)
             {
                 var media = item.FindExtension<YahooMediaSyndicationExtension>();
-                var description = media.Context.Contents.First().Description.Content;
-                var url = media.Context.Contents.First().Thumbnails.First().Url;
+                string description = media.Context.Contents.First().Description.Content;
+                Uri url = media.Context.Contents.First().Thumbnails.First().Url;
                 var p = new Presentation
                 {
                     Id = item.Guid.Value,
@@ -62,12 +65,11 @@ namespace TheProblemSolver.Controllers
 
         private static RssFeed GetRssFeed()
         {
-
             var settings = new SyndicationResourceLoadSettings();
             settings.RetrievalLimit = 555;
 
             var feedUrl = new Uri("http://www.slideshare.net/rss/user/mauricedb");
-            var feed = RssFeed.Create(feedUrl, settings);
+            RssFeed feed = RssFeed.Create(feedUrl, settings);
 
             return feed;
         }

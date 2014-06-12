@@ -8,13 +8,16 @@ using TheProblemSolver.Models;
 
 namespace TheProblemSolver.Controllers
 {
+#if !DEBUG
+    [OutputCache(Duration = 15 * 60)]
+#endif
     public class BlogController : Controller
     {
         //public ActionResult TopStory()
         //{
         //    var blogItem = GetBlogFeed().First();
         //    return PartialView(blogItem);
-            
+
         //}
 
 
@@ -24,7 +27,7 @@ namespace TheProblemSolver.Controllers
             return PartialView(blogItems);
         }
 
-        
+
         private static List<BlogItem> _news;
         private static DateTime _lastFetch;
 
