@@ -33,6 +33,8 @@ namespace TheProblemSolver.Controllers
 
         private static IEnumerable<BlogItem> GetBlogFeed()
         {
+            var news = _news;
+
             if (_lastFetch.AddMinutes(30) < DateTime.UtcNow)
             {
                 _news = null;
@@ -47,6 +49,7 @@ namespace TheProblemSolver.Controllers
                 }
                 catch (Exception)
                 {
+                    _news = news;
                 }
             }
             return _news ?? Enumerable.Empty<BlogItem>();
