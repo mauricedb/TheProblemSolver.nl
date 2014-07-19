@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 using Argotic.Common;
 using Argotic.Syndication;
@@ -33,24 +34,19 @@ namespace TheProblemSolver.Controllers
 
         private static IEnumerable<BlogItem> GetBlogFeed()
         {
-            var news = _news;
-
-            if (_lastFetch.AddMinutes(30) < DateTime.UtcNow)
+            if (_news == null || _lastFetch.AddHours(1) < DateTime.UtcNow)
             {
-                _news = null;
-            }
-
-            if (_news == null)
-            {
-                try
+                Task.Factory.StartNew(() =>
                 {
-                    _news = GetTwitterFeedFromWeb();
-                    _lastFetch = DateTime.UtcNow;
-                }
-                catch (Exception)
-                {
-                    _news = news;
-                }
+                    try
+                    {
+                        _news = GetTwitterFeedFromWeb();
+                        _lastFetch = DateTime.UtcNow;
+                    }
+                    catch (Exception)
+                    {
+                    }
+                });
             }
             return _news ?? Enumerable.Empty<BlogItem>();
         }
