@@ -81,7 +81,7 @@ namespace TheProblemSolver.Controllers
                 RetrievalLimit = 9
             };
 
-            var feedUrl = new Uri("http://msmvps.com/blogs/theproblemsolver/rss.aspx");
+            var feedUrl   = new Uri("http://blogs.msmvps.com/theproblemsolver/feed/");
             var feed = RssFeed.Create(feedUrl, settings);
 
             return feed;
