@@ -87,7 +87,7 @@ h3 {
 		height: 100%;
 		margin: 0;
 		padding: 0;
-		background: url("../tmp/logo.gif") 0 0 no-repeat;
+		/*background: url("../tmp/logo.gif") 0 0 no-repeat;*/
 		cursor: pointer;
 	}
 
