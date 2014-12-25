@@ -5,6 +5,8 @@ using System.Web.Mvc;
 using Argotic.Common;
 using Argotic.Syndication;
 using TheProblemSolver.Models;
+using TweetSharp;
+using System.Configuration;
 
 namespace TheProblemSolver.Controllers
 {
@@ -12,16 +14,11 @@ namespace TheProblemSolver.Controllers
     {
         //
         // GET: /News/
-        //[OutputCache(Duration = 15 * 60)]
-        //public ActionResult Index()
-        //{
-        //    var news = GetTwitterFeed();
-        //    return PartialView(news);
-        //}
-
+        [OutputCache(Duration = 15 * 60)]
         public ActionResult Index()
         {
-            return PartialView();
+            var news = GetTwitterFeed();
+            return PartialView(news);
         }
 
         private static List<NewsItem> _news;
@@ -53,13 +50,13 @@ namespace TheProblemSolver.Controllers
         {
             var presentations = new List<NewsItem>();
             var feed = GetRssFeed();
-            foreach (var item in feed.Channel.Items)
+            foreach (var item in feed)
             {
                 var newsItem = new NewsItem
                 {
-                    Description = item.Description,
-                    Date = item.PublicationDate,
-                    Uri = item.Link
+                    Description = item.TextAsHtml,
+                    Date = item.CreatedDate,
+                    //Uri = item.
                 };
 
                 presentations.Add(newsItem);
@@ -68,16 +65,19 @@ namespace TheProblemSolver.Controllers
             return presentations;
         }
 
-        private static RssFeed GetRssFeed()
+        private static IEnumerable<TwitterStatus> GetRssFeed()
         {
 
-            var settings = new SyndicationResourceLoadSettings();
-            settings.RetrievalLimit = 9;
+            var service = new TwitterService(ConfigurationManager.AppSettings["TwitterConsumerKey"], ConfigurationManager.AppSettings["TwitterConsumerSecret"]);
+            service.AuthenticateWith(ConfigurationManager.AppSettings["TwitterToken"], ConfigurationManager.AppSettings["TwitterTokenSecret"]);
 
-            var feedUrl = new Uri("https://api.twitter.com/1/statuses/user_timeline.rss?screen_name=mauricedb");
-            var feed = RssFeed.Create(feedUrl, settings);
+            var statusses = service.ListTweetsOnUserTimeline(new ListTweetsOnUserTimelineOptions()
+            {
+                ScreenName = "mauricedb",
+                Count = 9
+            });
 
-            return feed;
+            return statusses;
         }
     }
 }

@@ -61,12 +61,18 @@
     <Reference Include="Glimpse.Mvc4">
       <HintPath>..\..\NuGet Packages\Glimpse.Mvc4.1.5.3\lib\net40\Glimpse.Mvc4.dll</HintPath>
     </Reference>
+    <Reference Include="Hammock">
+      <HintPath>..\..\NuGet Packages\TweetSharp-Unofficial.2.3.1.2\lib\4.0\Hammock.dll</HintPath>
+    </Reference>
     <Reference Include="HtmlAgilityPack">
       <HintPath>..\..\NuGet Packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="NewRelic.Api.Agent">
       <HintPath>..\..\NuGet Packages\NewRelic.Azure.WebSites.3.1.65.0\lib\NewRelic.Api.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\NuGet Packages\TweetSharp-Unofficial.2.3.1.2\lib\4.0\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -98,9 +104,6 @@
     <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\..\NuGet Packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\NuGet Packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http">
     </Reference>
@@ -141,6 +144,9 @@
     <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\..\NuGet Packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="TweetSharp">
+      <HintPath>..\..\NuGet Packages\TweetSharp-Unofficial.2.3.1.2\lib\4.0\TweetSharp.dll</HintPath>
     </Reference>
     <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
@@ -322,6 +328,7 @@
     <Content Include="newrelic\extensions\extension.xsd">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="AppSettingsSecrets.config" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="newrelic\NewRelic.Profiler.dll" />
     <Content Include="Scripts\jquery-1.8.2.js" />
