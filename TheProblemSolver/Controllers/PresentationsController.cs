@@ -18,6 +18,7 @@ namespace TheProblemSolver.Controllers
         // GET: /Presentations/
 
         private static List<Presentation> _presentations;
+        private static DateTime _lastFetch;
 
         public ActionResult Index()
         {
@@ -28,9 +29,10 @@ namespace TheProblemSolver.Controllers
 
         private static List<Presentation> GetPresentations()
         {
-            if (_presentations == null)
+            if (_presentations == null || _lastFetch.AddDays(1) < DateTime.UtcNow)
             {
                 _presentations = GetPresentationsFromWeb();
+                _lastFetch = DateTime.UtcNow;
             }
             return _presentations;
         }
