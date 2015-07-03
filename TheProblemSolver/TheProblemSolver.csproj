@@ -220,6 +220,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HtmlToText.cs" />
     <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\TheReactNewsletterController.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="Models\BlogItem.cs" />
     <Compile Include="Models\NewsItem.cs" />
@@ -393,6 +394,7 @@
     <Content Include="Views\Blog\Recent.cshtml" />
     <Content Include="Views\Blog\TopStory.cshtml" />
     <Content Include="Views\Home\Test.cshtml" />
+    <Content Include="Views\TheReactNewsletter\Subscribe.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
