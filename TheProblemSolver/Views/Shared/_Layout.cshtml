@@ -19,7 +19,6 @@
 
         </div>
         <!-- /header -->
-
         <!-- Tray -->
         <div id="tray">
 
@@ -32,7 +31,6 @@
             <hr class="noscreen" />
         </div>
         <!-- /tray -->
-
         <!-- Columns -->
         <div id="cols" class="box">
 
@@ -59,43 +57,50 @@
                     @RenderSection("contentRight")
                 }
                 else
-                { 
+                {
                     <hr class="noscreen" />
                     <div id="content-right">
                         <!-- News -->
-@*                        <div class="box-01-top"></div>
-                        <div class="box-01-top-b box">
-                            <span class="f-left"><strong>Twitter</strong></span>
-                        </div>*@
+                        @*                        <div class="box-01-top"></div>
+                            <div class="box-01-top-b box">
+                                <span class="f-left"><strong>Twitter</strong></span>
+                            </div>*@
                         <!-- /box-01-top-b -->
                         @Html.Action("Index", "News")
                         <!-- /box-01 -->
- @*                       <div class="box-01-bottom"></div>
- *@                   </div>
+                        @*                       <div class="box-01-bottom"></div>
+                        *@
+                    </div>
                     <!-- /content-right -->
                 }
                 <hr class="noscreen" />
             </div>
             <!-- /content -->
-
-
             <!-- Aside -->
             <div id="aside">
                 <ul class="nav">
-                    <li id="nav-active"><a href="#">Publications</a>
+                    <li id="nav-active">
+                        <a href="#">Publications</a>
                         <ul>
                             <li>@Html.ActionLink("Presentations", "Index", "Presentations")</li>
                             <li><a href="http://msmvps.com/blogs/theproblemsolver/" target="_blank">Blog</a></li>
                             <li><a href="http://dotned.nl/PodCasts.aspx" target="_blank">Podcasts</a></li>
                         </ul>
                     </li>
-                    <li id="nav-active"><a href="#">The React Newsletter</a>
+                    <li id="nav-active">
+                        <a href="#">Courses</a>
+                        <ul>
+                            <li>@Html.ActionLink("React", "React", "Courses")</li>
+                        </ul>
+                    <li id="nav-active">
+                        <a href="#">The React Newsletter</a>
                         <ul>
                             <li>@Html.ActionLink("Subscribe", "Subscribe", "TheReactNewsletter")</li>
                             <li><a href="http://us4.campaign-archive2.com/home/?u=29c888baee9c05ccb614e1e92&id=aaae828db8" target="_blank">Archive</a></li>
                         </ul>
                     </li>
-                    <li id="nav-active"><a href="#">Other Web Sites</a>
+                    <li id="nav-active">
+                        <a href="#">Other Web Sites</a>
                         <ul>
                             <li><a href="http://html5support.nl/" target="_blank">HTML5 Support</a></li>
                             <li><a href="http://dotnetevents.nl/" target="_blank">DotNetEvents</a></li>
@@ -103,7 +108,8 @@
                         </ul>
 
                     </li>
-                    <li id="nav-active"><a href="#">Other links</a>
+                    <li id="nav-active">
+                        <a href="#">Other links</a>
                         <ul>
                             <li><a href="http://www.linkedin.com/in/mauricedebeijer" target="_blank">Linkedin</a></li>
                             <li><a href="http://stackoverflow.com/users/19676" target="_blank">StackOverflow</a></li>
@@ -142,7 +148,6 @@
 
         </div>
         <!-- /cols -->
-
         <!-- Footer -->
         <div id="footer">
             <p>Copyright &copy;&nbsp;@DateTime.UtcNow.Year <strong><a href="http://www.TheProblemSolver.nl/">ABL - The Problem Sover</a></strong>, All Rights Reserved &reg;</p>
