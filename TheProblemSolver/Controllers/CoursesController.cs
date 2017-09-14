@@ -2,6 +2,9 @@
 
 namespace TheProblemSolver.Controllers
 {
+#if !DEBUG
+    [OutputCache(Duration = 15 * 60)]
+#endif
     public class CoursesController : Controller
     {
         public ActionResult Index()

@@ -31,8 +31,4 @@ namespace TheProblemSolver.Controllers
             return View();
         }
     }
-
-#if !DEBUG
-    [OutputCache(Duration = 15 * 60)]
-#endif
 }
