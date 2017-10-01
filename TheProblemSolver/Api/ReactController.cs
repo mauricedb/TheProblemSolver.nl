@@ -1,37 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Web.Mvc;
 using Google.Apis.Services;
 using Google.Apis.Sheets.v4;
 using System.Globalization;
-using System.Net.Http;
-using System.Threading.Tasks;
 using System.Web.Http;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace TheProblemSolver.Api
 {
-    public class BookieBookieController : ApiController
-    {
-        public async Task<string> Get(string url, string title)
-        {
-            var client = new HttpClient();
-            var token = Environment.GetEnvironmentVariable("BitlyToken");
-            var response = await client.GetStringAsync(@"https://api-ssl.bitly.com/v3/shorten?access_token=" + token + "&longUrl=" + url);
-            var json = JObject.Parse(response);
-            var shortUrl = json["data"]["url"].ToString();
-
-            return shortUrl;
-        }
-    }
-
-
     public class ReactController : ApiController
     {
         //
         // GET: /React/
-
         public IEnumerable<Item> Get()
         {
             var sheetService = new SheetsService(new BaseClientService.Initializer()
