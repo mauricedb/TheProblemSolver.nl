@@ -9,7 +9,7 @@
     let imageSrc = null;
     if (image) {
         imageSrc = image.src;
-        const re = /https:\/\/cdn-images-1.medium.com\/max\/2000\/(.*\.png)/i;
+        const re = /https:\/\/cdn-images-1.medium.com\/max\/\d*\/(.*\.png)/i;
         imageSrc.replace(re, 'https://cdn-images-1.medium.com/max/800/$1');
     }
 
