@@ -28,12 +28,23 @@ namespace TheProblemSolver.Api
             {
                 foreach (var row in values)
                 {
-                    result.Add(new Item()
+                    DateTime date;
+                    var originalDate = row[3];
+                    if (originalDate is DateTime)
+                    {
+                        date = (DateTime)originalDate;
+                    }
+                    else
+                    {
+                        date = DateTime.Parse((string) originalDate);
+                    }
+
+                    result.Add(new Item
                     {
                         title = (string)row[0],
                         author = (string)row[1],
                         link = (string)row[2],
-                        date = DateTime.Parse((string)row[3]).ToString("s", CultureInfo.InvariantCulture),
+                        date = date.ToString("s", CultureInfo.InvariantCulture),
                     });
                 }
             }
