@@ -176,6 +176,7 @@ h3 {
 .nav {
 	margin: 0;
 	list-style: none;
+    display: block;
 }
 
 	.nav li {

@@ -8,6 +8,11 @@ namespace TheProblemSolver.Controllers
         {
             return View();
         }
-        
+
+        public ActionResult ReadingList()
+        {
+            return View();
+        }
+
     }
 }

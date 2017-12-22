@@ -5,6 +5,7 @@
     <meta name=viewport content="width=device-width, initial-scale=1">
     <title>@ViewBag.Title - ABL The Problem Solver</title>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    @RenderSection("styles", required: false)
     @Styles.Render("~/Content/css")
 </head>
 <body>
@@ -98,6 +99,7 @@
                         <ul>
                             <li>@Html.ActionLink("Subscribe", "Subscribe", "TheReactNewsletter")</li>
                             <li><a href="http://us4.campaign-archive2.com/home/?u=29c888baee9c05ccb614e1e92&id=aaae828db8" target="_blank">Archive</a></li>
+                            <li>@Html.ActionLink("Reading List", "ReadingList", "TheReactNewsletter")</li>
                         </ul>
                     </li>
                     <li id="nav-active">
@@ -129,14 +131,13 @@
                         <a href="http://msmvps.com/blogs/theproblemsolver/rss.aspx" class="rss">Articles</a><br />
                     </p>
 
-                    <h4 class="margin">Search:</h4>
+                    @*<h4 class="margin">Search:</h4>
 
                     <form action="#" method="get">
                         <div id="search" class="box">
                             <input type="text" size="20" id="search-input" /><input type="submit" id="search-submit" value="Search" />
                         </div>
-                        <!-- /search -->
-                    </form>
+                    </form>*@
 
                 </div>
                 <!-- /padding -->
