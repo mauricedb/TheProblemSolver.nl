@@ -10,7 +10,7 @@
   if (image) {
     imageSrc = image.src;
     const re = /(https:\/\/cdn-images-1.medium.com\/max\/)\d*(\/.*\.png)/i;
-    imageSrc.replace(re, '$1' + '800' + '$2');
+    imageSrc = imageSrc.replace(re, '$1' + '800' + '$2');
   }
 
   console.log(title);
