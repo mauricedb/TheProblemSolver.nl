@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web.Mvc;
 using Argotic.Common;
 using Argotic.Extensions.Core;
@@ -70,7 +71,8 @@ namespace TheProblemSolver.Controllers
             var settings = new SyndicationResourceLoadSettings();
             settings.RetrievalLimit = 555;
 
-            var feedUrl = new Uri("http://www.slideshare.net/rss/user/mauricedb");
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            var feedUrl = new Uri("https://www.slideshare.net/rss/user/mauricedb");
             RssFeed feed = RssFeed.Create(feedUrl, settings);
 
             return feed;
