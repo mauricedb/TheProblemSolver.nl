@@ -18,7 +18,7 @@ namespace TheProblemSolver.Api
                 ApiKey = Environment.GetEnvironmentVariable("GoogleApiKey")
             });
 
-            var request = sheetService.Spreadsheets.Values.Get(Environment.GetEnvironmentVariable("ReactSheetId"), "Sheet2!A2:D");
+            var request = sheetService.Spreadsheets.Values.Get(Environment.GetEnvironmentVariable("ReactSheetId"), "Full!A2:D");
             var response = request.Execute();
             var values = response.Values;
 
