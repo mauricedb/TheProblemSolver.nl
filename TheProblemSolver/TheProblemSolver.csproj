@@ -43,6 +43,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\..\NuGet Packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Argotic.Common">
       <HintPath>..\..\NuGet Packages\Argotic.Common.2008.0.2.0\lib\Net35\Argotic.Common.dll</HintPath>
     </Reference>
@@ -52,66 +55,94 @@
     <Reference Include="Argotic.Extensions">
       <HintPath>..\..\NuGet Packages\Argotic.Extensions.2008.0.2.0\lib\Net35\Argotic.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="Glimpse.AspNet, Version=1.9.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\NuGet Packages\Glimpse.AspNet.1.9.0\lib\net45\Glimpse.AspNet.dll</HintPath>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <HintPath>..\..\NuGet Packages\DotNetOpenAuth.AspNet.4.3.4.13329\lib\net45-full\DotNetOpenAuth.AspNet.dll</HintPath>
     </Reference>
-    <Reference Include="Glimpse.Core, Version=1.8.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\NuGet Packages\Glimpse.1.8.5\lib\net45\Glimpse.Core.dll</HintPath>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <HintPath>..\..\NuGet Packages\DotNetOpenAuth.Core.4.3.4.13329\lib\net45-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <HintPath>..\..\NuGet Packages\DotNetOpenAuth.OAuth.Core.4.3.4.13329\lib\net45-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <HintPath>..\..\NuGet Packages\DotNetOpenAuth.OAuth.Consumer.4.3.4.13329\lib\net45-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <HintPath>..\..\NuGet Packages\DotNetOpenAuth.OpenId.Core.4.3.4.13329\lib\net45-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <HintPath>..\..\NuGet Packages\DotNetOpenAuth.OpenId.RelyingParty.4.3.4.13329\lib\net45-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\NuGet Packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\NuGet Packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.AspNet, Version=1.9.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\NuGet Packages\Glimpse.AspNet.1.9.2\lib\net45\Glimpse.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.Core, Version=1.8.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\NuGet Packages\Glimpse.1.8.6\lib\net45\Glimpse.Core.dll</HintPath>
     </Reference>
     <Reference Include="Glimpse.Mvc4">
       <HintPath>..\..\NuGet Packages\Glimpse.Mvc4.1.5.3\lib\net40\Glimpse.Mvc4.dll</HintPath>
     </Reference>
-    <Reference Include="Google.Apis">
-      <HintPath>..\..\NuGet Packages\Google.Apis.1.25.0\lib\net45\Google.Apis.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Google.Apis, Version=1.38.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\..\NuGet Packages\Google.Apis.1.38.0\lib\net45\Google.Apis.dll</HintPath>
     </Reference>
-    <Reference Include="Google.Apis.Auth">
-      <HintPath>..\..\NuGet Packages\Google.Apis.Auth.1.25.0\lib\net45\Google.Apis.Auth.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Google.Apis.Auth, Version=1.38.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\..\NuGet Packages\Google.Apis.Auth.1.38.0\lib\net45\Google.Apis.Auth.dll</HintPath>
     </Reference>
-    <Reference Include="Google.Apis.Auth.PlatformServices">
-      <HintPath>..\..\NuGet Packages\Google.Apis.Auth.1.25.0\lib\net45\Google.Apis.Auth.PlatformServices.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.38.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\..\NuGet Packages\Google.Apis.Auth.1.38.0\lib\net45\Google.Apis.Auth.PlatformServices.dll</HintPath>
     </Reference>
-    <Reference Include="Google.Apis.Core">
-      <HintPath>..\..\NuGet Packages\Google.Apis.Core.1.25.0\lib\net45\Google.Apis.Core.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Google.Apis.Core, Version=1.38.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\..\NuGet Packages\Google.Apis.Core.1.38.0\lib\net45\Google.Apis.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Google.Apis.PlatformServices">
-      <HintPath>..\..\NuGet Packages\Google.Apis.1.25.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.38.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\..\NuGet Packages\Google.Apis.1.38.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
     </Reference>
-    <Reference Include="Google.Apis.Sheets.v4">
-      <HintPath>..\..\NuGet Packages\Google.Apis.Sheets.v4.1.25.0.838\lib\net45\Google.Apis.Sheets.v4.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Google.Apis.Sheets.v4, Version=1.38.0.1537, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\..\NuGet Packages\Google.Apis.Sheets.v4.1.38.0.1537\lib\net45\Google.Apis.Sheets.v4.dll</HintPath>
     </Reference>
     <Reference Include="Hammock">
       <HintPath>..\..\NuGet Packages\TweetSharp-Unofficial.2.3.1.2\lib\4.0\Hammock.dll</HintPath>
     </Reference>
-    <Reference Include="HtmlAgilityPack">
-      <HintPath>..\..\NuGet Packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    <Reference Include="HtmlAgilityPack, Version=1.11.1.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\..\NuGet Packages\HtmlAgilityPack.1.11.1\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="NewRelic.Api.Agent">
-      <HintPath>..\..\NuGet Packages\NewRelic.Azure.WebSites.3.1.65.0\lib\NewRelic.Api.Agent.dll</HintPath>
+    <Reference Include="Microsoft.Data.Edm, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\NuGet Packages\Microsoft.Data.Edm.5.8.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\NuGet Packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Microsoft.Data.OData, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\NuGet Packages\Microsoft.Data.OData.5.8.4\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="NewRelic.Api.Agent, Version=8.14.222.0, Culture=neutral, PublicKeyToken=06552fced0b33d87, processorArchitecture=MSIL">
+      <HintPath>..\..\NuGet Packages\NewRelic.Azure.WebSites.8.14.222\lib\NewRelic.Api.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\NuGet Packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Spatial, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\NuGet Packages\System.Spatial.5.8.4\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http.OData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\NuGet Packages\Microsoft.AspNet.WebApi.OData.4.0.1\lib\net40\System.Web.Http.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\NuGet Packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -122,9 +153,6 @@
     <Reference Include="System.Transactions" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="EntityFramework">
-      <HintPath>..\..\NuGet Packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\..\NuGet Packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -154,9 +182,6 @@
       <Private>True</Private>
       <HintPath>..\..\NuGet Packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Optimization">
-      <HintPath>..\..\NuGet Packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\..\NuGet Packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
@@ -176,6 +201,9 @@
     <Reference Include="TweetSharp">
       <HintPath>..\..\NuGet Packages\TweetSharp-Unofficial.2.3.1.2\lib\4.0\TweetSharp.dll</HintPath>
     </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\NuGet Packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
     <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\..\NuGet Packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
@@ -187,54 +215,6 @@
     <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\..\NuGet Packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
-    </Reference>
-    <Reference Include="DotNetOpenAuth.AspNet, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\..\NuGet Packages\DotNetOpenAuth.AspNet.4.1.4.12333\lib\net45-full\DotNetOpenAuth.AspNet.dll</HintPath>
-    </Reference>
-    <Reference Include="DotNetOpenAuth.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\..\NuGet Packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\..\NuGet Packages\DotNetOpenAuth.OAuth.Consumer.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
-    </Reference>
-    <Reference Include="DotNetOpenAuth.OAuth, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\..\NuGet Packages\DotNetOpenAuth.OAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.dll</HintPath>
-    </Reference>
-    <Reference Include="DotNetOpenAuth.OpenId, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\..\NuGet Packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.dll</HintPath>
-    </Reference>
-    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\..\NuGet Packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Http.OData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\..\NuGet Packages\Microsoft.AspNet.WebApi.OData.4.0.0\lib\net40\System.Web.Http.OData.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\..\NuGet Packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\..\NuGet Packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\..\NuGet Packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
-    </Reference>
-    <Reference Include="WebGrease">
-      <Private>True</Private>
-      <HintPath>..\..\NuGet Packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
-    </Reference>
-    <Reference Include="Antlr3.Runtime">
-      <Private>True</Private>
-      <HintPath>..\..\NuGet Packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Zlib.Portable">
       <HintPath>..\..\NuGet Packages\Zlib.Portable.Signed.1.11.0\lib\portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid\Zlib.Portable.dll</HintPath>
@@ -302,6 +282,15 @@
     <Content Include="Content\reset.css" />
     <Content Include="Content\Responsive.css" />
     <Content Include="Content\style.css" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -312,75 +301,119 @@
     <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
     <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
     <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_444444_256x240.png" />
     <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777777_256x240.png" />
     <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cc0000_256x240.png" />
     <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_ffffff_256x240.png" />
     <Content Include="Content\themes\base\jquery-ui.css" />
-    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
-    <Content Include="Content\themes\base\jquery.ui.all.css" />
-    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
-    <Content Include="Content\themes\base\jquery.ui.base.css" />
-    <Content Include="Content\themes\base\jquery.ui.button.css" />
-    <Content Include="Content\themes\base\jquery.ui.core.css" />
-    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
-    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
-    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
-    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
-    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
-    <Content Include="Content\themes\base\jquery.ui.slider.css" />
-    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
-    <Content Include="Content\themes\base\jquery.ui.theme.css" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
-    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
-    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
-    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
-    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\base\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="newrelic\extensions\CoreInstrumentation.xml" />
+    <Content Include="newrelic\extensions\JetBrains.Annotations.dll" />
+    <Content Include="newrelic\extensions\net46\NewRelic.Providers.Storage.AsyncLocal.dll" />
+    <Content Include="newrelic\extensions\netstandard2.0\NewRelic.Core.dll" />
+    <Content Include="newrelic\extensions\netstandard2.0\NewRelic.Providers.Wrapper.AspNetCore.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Core.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Parsing.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Storage.CallContext.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Storage.HttpContext.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Storage.OperationContext.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Asp35.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Asp35.Instrumentation.xml" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.AspNetCore.Instrumentation.xml" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.CastleMonoRail2.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.CastleMonoRail2.Instrumentation.xml" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Couchbase.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Couchbase.Instrumentation.xml" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.CustomInstrumentation.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.CustomInstrumentationAsync.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.HttpClient.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.HttpClient.Instrumentation.xml" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.HttpWebRequest.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.HttpWebRequest.Instrumentation.xml" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Misc.Instrumentation.xml" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.MongoDb.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.MongoDb.Instrumentation.xml" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.MongoDb26.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.MongoDb26.Instrumentation.xml" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Msmq.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Msmq.Instrumentation.xml" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Mvc3.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Mvc3.Instrumentation.xml" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.NServiceBus.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.NServiceBus.Instrumentation.xml" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.OpenRasta.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.OpenRasta.Instrumentation.xml" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Owin.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Owin.Instrumentation.xml" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.RabbitMq.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.RabbitMq.Instrumentation.xml" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.RestSharp.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.RestSharp.Instrumentation.xml" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.ScriptHandlerFactory.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.ScriptHandlerFactory.Instrumentation.xml" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.ServiceStackRedis.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.ServiceStackRedis.Instrumentation.xml" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Sql.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Sql.Instrumentation.xml" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.SqlAsync.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.SqlAsync.Instrumentation.xml" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.StackExchangeRedis.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.StackExchangeRedis.Instrumentation.xml" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Wcf3.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Wcf3.Instrumentation.xml" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.WebApi1.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.WebApi1.Instrumentation.xml" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.WebApi2.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.WebApi2.Instrumentation.xml" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.WebOptimization.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.WebOptimization.Instrumentation.xml" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.WebServices.dll" />
+    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.WebServices.Instrumentation.xml" />
     <Content Include="newrelic\NewRelic.Agent.Core.dll" />
+    <Content Include="newrelic\NewRelic.Agent.Extensions.dll" />
+    <Content Include="newrelic\NewRelic.Profiler.dll" />
+    <Content Include="Scripts\bookieBookie.js" />
     <Content Include="newrelic\newrelic.config" />
     <Content Include="newrelic\extensions\extension.xsd">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
-    <Content Include="newrelic\NewRelic.Profiler.dll" />
-    <Content Include="Scripts\bookieBookie.js" />
-    <Content Include="Scripts\jquery-1.8.2.js" />
-    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <None Include="newrelic\newrelic.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery-ui-1.8.24.js" />
-    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\knockout-2.2.0.debug.js" />
-    <Content Include="Scripts\knockout-2.2.0.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\knockout-3.5.0.debug.js" />
+    <Content Include="Scripts\knockout-3.5.0.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="static\css\main.d22fbfb7.css" />
     <Content Include="static\js\main.011b5b58.js" />
     <Content Include="tmp\105x75.gif" />
@@ -445,6 +478,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

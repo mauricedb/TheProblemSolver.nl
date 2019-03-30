@@ -36,7 +36,7 @@ namespace TheProblemSolver.Api
                     }
                     else
                     {
-                        date = DateTime.Parse((string) originalDate);
+                        date = DateTime.Parse((string)originalDate, CultureInfo.InvariantCulture);
                     }
 
                     result.Add(new Item
@@ -49,7 +49,7 @@ namespace TheProblemSolver.Api
                 }
             }
 
-            result.Sort((x, y) => string.Compare(y.date, x.date));
+            result.Sort((x, y) => string.Compare(y.date, x.date, StringComparison.InvariantCulture));
 
             return result;
         }
