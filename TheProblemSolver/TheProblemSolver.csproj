@@ -122,9 +122,6 @@
     <Reference Include="Microsoft.Web.WebPages.OAuth, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\NuGet Packages\Microsoft.AspNet.WebPages.OAuth.3.2.7\lib\net45\Microsoft.Web.WebPages.OAuth.dll</HintPath>
     </Reference>
-    <Reference Include="NewRelic.Api.Agent, Version=8.14.222.0, Culture=neutral, PublicKeyToken=06552fced0b33d87, processorArchitecture=MSIL">
-      <HintPath>..\..\NuGet Packages\NewRelic.Azure.WebSites.8.14.222\lib\NewRelic.Api.Agent.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\NuGet Packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -318,78 +315,7 @@
     <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="newrelic\extensions\JetBrains.Annotations.dll" />
-    <Content Include="newrelic\extensions\net46\NewRelic.Providers.Storage.AsyncLocal.dll" />
-    <Content Include="newrelic\extensions\netstandard2.0\NewRelic.Core.dll" />
-    <Content Include="newrelic\extensions\netstandard2.0\NewRelic.Providers.Wrapper.AspNetCore.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Core.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Parsing.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Storage.CallContext.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Storage.HttpContext.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Storage.OperationContext.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Asp35.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Asp35.Instrumentation.xml" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.AspNetCore.Instrumentation.xml" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.CastleMonoRail2.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.CastleMonoRail2.Instrumentation.xml" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Couchbase.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Couchbase.Instrumentation.xml" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.CustomInstrumentation.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.CustomInstrumentationAsync.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.HttpClient.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.HttpClient.Instrumentation.xml" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.HttpWebRequest.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.HttpWebRequest.Instrumentation.xml" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Misc.Instrumentation.xml" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.MongoDb.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.MongoDb.Instrumentation.xml" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.MongoDb26.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.MongoDb26.Instrumentation.xml" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Msmq.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Msmq.Instrumentation.xml" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Mvc3.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Mvc3.Instrumentation.xml" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.NServiceBus.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.NServiceBus.Instrumentation.xml" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.OpenRasta.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.OpenRasta.Instrumentation.xml" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Owin.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Owin.Instrumentation.xml" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.RabbitMq.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.RabbitMq.Instrumentation.xml" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.RestSharp.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.RestSharp.Instrumentation.xml" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.ScriptHandlerFactory.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.ScriptHandlerFactory.Instrumentation.xml" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.ServiceStackRedis.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.ServiceStackRedis.Instrumentation.xml" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Sql.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Sql.Instrumentation.xml" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.SqlAsync.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.SqlAsync.Instrumentation.xml" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.StackExchangeRedis.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.StackExchangeRedis.Instrumentation.xml" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Wcf3.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.Wcf3.Instrumentation.xml" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.WebApi1.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.WebApi1.Instrumentation.xml" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.WebApi2.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.WebApi2.Instrumentation.xml" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.WebOptimization.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.WebOptimization.Instrumentation.xml" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.WebServices.dll" />
-    <Content Include="newrelic\extensions\NewRelic.Providers.Wrapper.WebServices.Instrumentation.xml" />
-    <Content Include="newrelic\NewRelic.Agent.Core.dll" />
-    <Content Include="newrelic\NewRelic.Agent.Extensions.dll" />
-    <Content Include="newrelic\NewRelic.Profiler.dll" />
     <Content Include="Scripts\bookieBookie.js" />
-    <Content Include="newrelic\newrelic.config" />
-    <Content Include="newrelic\extensions\extension.xsd">
-      <SubType>Designer</SubType>
-    </Content>
-    <None Include="newrelic\newrelic.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
