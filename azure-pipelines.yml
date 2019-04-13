@@ -21,6 +21,10 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
+- task: NuGetCommand@2
+  inputs:
+    command: 'restore'
+
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
