@@ -333,8 +333,6 @@
     <Content Include="Scripts\knockout-3.5.0.debug.js" />
     <Content Include="Scripts\knockout-3.5.0.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="static\css\main.d22fbfb7.css" />
-    <Content Include="static\js\main.011b5b58.js" />
     <Content Include="tmp\105x75.gif" />
     <Content Include="tmp\125x125.gif" />
     <Content Include="tmp\180x135.gif" />
@@ -389,11 +387,11 @@
     <Content Include="Views\Courses\Index.cshtml" />
     <Content Include="Views\Courses\Angular.cshtml" />
     <Content Include="Views\TheReactNewsletter\ReadingList.cshtml" />
-    <Content Include="static\css\main.d22fbfb7.css.map" />
-    <Content Include="static\js\main.011b5b58.js.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="static\css\" />
+    <Folder Include="static\js\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
