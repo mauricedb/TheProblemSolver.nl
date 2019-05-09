@@ -21,5 +21,10 @@ namespace TheProblemSolver.Controllers
         {
             return View();
         }
+
+        public ActionResult TypeScriptForReactDevelopers()
+        {
+            return View();
+        }
     }
 }

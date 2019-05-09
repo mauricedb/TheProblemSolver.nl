@@ -387,6 +387,7 @@
     <Content Include="Views\Courses\Index.cshtml" />
     <Content Include="Views\Courses\Angular.cshtml" />
     <Content Include="Views\TheReactNewsletter\ReadingList.cshtml" />
+    <Content Include="Views\Courses\TypeScriptForReactDevelopers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
