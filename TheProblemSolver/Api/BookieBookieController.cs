@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
@@ -27,17 +28,25 @@ namespace TheProblemSolver.Api
 
         public async Task<string> Get(string url, string title, string image)
         {
-            var shortUrl = await ShortenUrl(url);
-
-            items.Add(new BookieBookieItem()
+            try
             {
-                Title = title,
-                Url = shortUrl,
-                Image = image,
-                DateTime = DateTime.UtcNow
-            });
+                var shortUrl = await ShortenUrl(url);
 
-            return shortUrl;
+                items.Add(new BookieBookieItem()
+                {
+                    Title = title,
+                    Url = shortUrl,
+                    Image = image,
+                    DateTime = DateTime.UtcNow
+                });
+
+                return shortUrl;
+            }
+            catch (System.Exception ex)
+            {
+                this.StatusCode(HttpStatusCode.InternalServerError);
+                return ex.ToString();
+            }
         }
 
         private static async Task<string> ShortenUrl(string url)
