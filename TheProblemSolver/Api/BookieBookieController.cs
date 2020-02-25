@@ -31,7 +31,7 @@ namespace TheProblemSolver.Api
         {
             try
             {
-                var shortUrl = await ShortenUrl(url);
+                var shortUrl = await ShortenUrl3(url);
 
                 items.Add(new BookieBookieItem()
                 {
@@ -50,11 +50,12 @@ namespace TheProblemSolver.Api
             }
         }
 
-        private static async Task<string> ShortenUrl(string url)
+        private static async Task<string> ShortenUrl4(string url)
         {
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             var client = new HttpClient();
             var token = Environment.GetEnvironmentVariable("BitlyToken");
+            token = "34b10af37f646d6d439967e20714315038621885";
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
             var response = await client.PostAsJsonAsync(
@@ -66,6 +67,18 @@ namespace TheProblemSolver.Api
             var json = JObject.Parse(await response.Content.ReadAsStringAsync());
             var shortUrl = json["link"].ToString();
 
+            return shortUrl;
+        }
+
+        private static async Task<string> ShortenUrl3(string url)
+        {
+            var client = new HttpClient();
+            var token = Environment.GetEnvironmentVariable("BitlyToken");
+            token = "34b10af37f646d6d439967e20714315038621885";
+            var response =
+                await client.GetStringAsync(@"https://api-ssl.bitly.com/v3/shorten?access_token=" + token + "&longUrl=" + url);
+            var json = JObject.Parse(response);
+            var shortUrl = json["data"]["url"].ToString();
             return shortUrl;
         }
 
