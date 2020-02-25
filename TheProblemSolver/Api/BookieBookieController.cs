@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Web.Http;
 using DotNetOpenAuth.Messaging;
@@ -54,10 +55,20 @@ namespace TheProblemSolver.Api
             var client = new HttpClient();
             var token = Environment.GetEnvironmentVariable("BitlyToken");
             token = "34b10af37f646d6d439967e20714315038621885";
-            var response =
-                await client.GetStringAsync(@"https://api-ssl.bitly.com/v3/shorten?access_token=" + token + "&longUrl=" + url);
-            var json = JObject.Parse(response);
-            var shortUrl = json["data"]["url"].ToString();
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+            var response = await client.PostAsJsonAsync(
+                "https://api-ssl.bitly.com/v4/shorten"
+                , new {
+                long_url= url
+            });
+
+            // var response =
+            //     await client.GetStringAsync(@"https://api-ssl.bitly.com/v3/shorten?access_token=" + token + "&longUrl=" + url);
+            var json = JObject.Parse(await response.Content.ReadAsStringAsync());
+            // var shortUrl = json["data"]["url"].ToString();
+            var shortUrl = json["link"].ToString();
+
             return shortUrl;
         }
 
