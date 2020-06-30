@@ -1,32 +1,41 @@
 ﻿window.bookieBookie = () => {
-  function getPathFromUrl(url) {
-    return url.split(/[?#]/)[0];
+  function getPathFromLocation(location) {
+    const params = new URLSearchParams(location.search);
+    // Delete Urchin Tracking Module (UTM) parameters
+    params.delete("utm_source");
+    params.delete("utm_medium");
+    params.delete("utm_campaign");
+    params.delete("utm_term");
+    params.delete("utm_content");
+
+    if (Array.from(params).length) {
+      return `${location.origin}${location.pathname}?${params}`;
+    } else {
+      return `${location.origin}${location.pathname}`;
+    }
   }
 
-  const title = document.querySelector('title').textContent;
-  const url = encodeURIComponent(getPathFromUrl(document.location.href));
-  const image = document.querySelector('.progressiveMedia-image');
+  const title = document.querySelector("title").textContent;
+  const url = encodeURIComponent(getPathFromLocation(document.location));
+  const image = document.querySelector(".progressiveMedia-image");
   let imageSrc = null;
   if (image) {
     imageSrc = image.src;
     const re = /(https:\/\/cdn-images-1.medium.com\/max\/)\d*(\/.*\.png)/i;
-    imageSrc = imageSrc.replace(re, '$1' + '800' + '$2');
+    imageSrc = imageSrc.replace(re, "$1" + "800" + "$2");
   }
 
   console.log(title);
   console.log(url);
   console.log(imageSrc);
 
-  var host = 'https://theproblemsolver.azurewebsites.net';
+  var host = "https://theproblemsolver.azurewebsites.net";
   //var host = 'http://localhost:32662';
   document.body.appendChild(
-    document.createElement('script')
+    document.createElement("script")
   ).src = `${host}/Api/BookieBookie?url=${url}&title=${title}&image=${imageSrc}`;
 
-  
-  document.body.appendChild(
-	document.createElement('style')
-  ).textContent = `
+  document.body.appendChild(document.createElement("style")).textContent = `
 /* The snackbar - position it at the bottom and in the middle of the screen */
 #snackbar {
     visibility: hidden; /* Hidden by default. Visible on click */
@@ -74,14 +83,14 @@ However, delay the fade out process for 2.5 seconds */
     to {bottom: 0; opacity: 0;}
 }
   `;
-  
-  var div = document.body.appendChild(
-	document.createElement('div')
-  )
-  div.textContent = 'Bookie bookie Saved';
-  div.id = 'snackbar'
-  div.className = 'show';
-  setTimeout(function(){ div.className = div.className.replace("show", ""); }, 3000);
+
+  var div = document.body.appendChild(document.createElement("div"));
+  div.textContent = "Bookie bookie Saved";
+  div.id = "snackbar";
+  div.className = "show";
+  setTimeout(function () {
+    div.className = div.className.replace("show", "");
+  }, 3000);
 };
 
 bookieBookie();
