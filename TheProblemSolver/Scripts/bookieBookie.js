@@ -15,7 +15,7 @@
     }
   }
 
-  const title = document.querySelector("title").textContent;
+  const title = document.querySelector("title").textContent?.trim() ?? "";
   const url = encodeURIComponent(getPathFromLocation(document.location));
   const image = document.querySelector(".progressiveMedia-image");
   let imageSrc = null;
