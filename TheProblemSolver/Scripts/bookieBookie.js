@@ -8,6 +8,8 @@
     params.delete("utm_term");
     params.delete("utm_content");
 
+    params.delete("ck_subscriber_id");
+
     if (Array.from(params).length) {
       return `${location.origin}${location.pathname}?${params}`;
     } else {
