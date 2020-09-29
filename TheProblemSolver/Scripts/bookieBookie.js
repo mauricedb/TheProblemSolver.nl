@@ -26,6 +26,11 @@
     const re = /(https:\/\/cdn-images-1.medium.com\/max\/)\d*(\/.*\.png)/i;
     imageSrc = imageSrc.replace(re, "$1" + "800" + "$2");
   }
+  
+  if (!image) {
+	// Possible twitter handle
+	imageSrc = (document.querySelector('a[href^="https://twitter.com/"]')?.href ?? "").replace("https://twitter.com/", "@")
+  }
 
   console.log(title);
   console.log(url);
