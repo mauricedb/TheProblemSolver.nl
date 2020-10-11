@@ -28,7 +28,7 @@ namespace TheProblemSolver.Api
             return currentItems;
         }
 
-        public async Task<string> Get(string url, string title, string image)
+        public async Task<string> Get(string url, string title, string image, string by)
         {
             try
             {
@@ -39,6 +39,7 @@ namespace TheProblemSolver.Api
                     Title = title,
                     Url = shortUrl,
                     Image = image,
+                    By = by,
                     DateTime = DateTime.UtcNow
                 });
 
@@ -92,6 +93,7 @@ namespace TheProblemSolver.Api
             public string Title { get; set; }
             public string Url { get; set; }
             public string Image { get; set; }
+            public string By { get; set; }
             public DateTime DateTime { get; set; }
         }
     }

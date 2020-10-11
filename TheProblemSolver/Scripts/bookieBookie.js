@@ -17,30 +17,50 @@
     }
   }
 
-  const title = encodeURIComponent(document.querySelector("title").textContent?.trim()) ?? "";
+  function getTitle() {
+    const metaTitle =
+      document.querySelector('meta[property="twitter:title"]')?.content ??
+      document.querySelector('meta[property="og:title"]')?.content;
+
+    if (metaTitle) {
+      return metaTitle;
+    }
+
+    return document.querySelector("title").textContent?.trim() ?? "";
+  }
+
+  function getImage() {
+    const metaImage =
+      document.querySelector('meta[name="twitter:image"]')?.content ??
+      document.querySelector('meta[name="twitter:image:src"]')?.content ??
+      document.querySelector('meta[property="og:image"]')?.content ??
+      null;
+
+    return metaImage;
+  }
+
+  function getTwitterHandle() {
+    const metaImage =
+      document.querySelector('meta[name="twitter:creator"]')?.content ?? null;
+
+    return metaImage;
+  }
+
+  const title = encodeURIComponent(getTitle());
   const url = encodeURIComponent(getPathFromLocation(document.location));
-  const image = document.querySelector(".progressiveMedia-image");
-  let imageSrc = null;
-  if (image) {
-    imageSrc = image.src;
-    const re = /(https:\/\/cdn-images-1.medium.com\/max\/)\d*(\/.*\.png)/i;
-    imageSrc = imageSrc.replace(re, "$1" + "800" + "$2");
-  }
-  
-  if (!image) {
-	// Possible twitter handle
-	imageSrc = (document.querySelector('a[href^="https://twitter.com/"]')?.href ?? "").replace("https://twitter.com/", "@")
-  }
+  const imageSrc = encodeURIComponent(getImage());
+  const twitterHandle = encodeURIComponent(getTwitterHandle());
 
   console.log(title);
   console.log(url);
   console.log(imageSrc);
+  console.log(twitterHandle);
 
   var host = "https://theproblemsolver.azurewebsites.net";
   //var host = 'http://localhost:32662';
   document.body.appendChild(
     document.createElement("script")
-  ).src = `${host}/Api/BookieBookie?url=${url}&title=${title}&image=${imageSrc}`;
+  ).src = `${host}/Api/BookieBookie?url=${url}&title=${title}&image=${imageSrc}&by=${twitterHandle}`;
 
   document.body.appendChild(document.createElement("style")).textContent = `
 /* The snackbar - position it at the bottom and in the middle of the screen */
