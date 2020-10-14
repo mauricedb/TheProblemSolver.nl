@@ -20,7 +20,10 @@
   function getTitle() {
     const metaTitle =
       document.querySelector('meta[property="twitter:title"]')?.content ??
-      document.querySelector('meta[property="og:title"]')?.content;
+      document.querySelector('meta[property="og:title"]')?.content ??
+      document
+        .querySelector("web-share-wrapper[sharetext]")
+        ?.getAttribute("sharetext");
 
     if (metaTitle) {
       return metaTitle;
