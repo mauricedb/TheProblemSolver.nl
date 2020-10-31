@@ -2,13 +2,13 @@
   function getPathFromLocation(location) {
     const params = new URLSearchParams(location.search);
     // Delete Urchin Tracking Module (UTM) parameters
-    params.delete("utm_source");
-    params.delete("utm_medium");
-    params.delete("utm_campaign");
-    params.delete("utm_term");
-    params.delete("utm_content");
+    params.delete('utm_source');
+    params.delete('utm_medium');
+    params.delete('utm_campaign');
+    params.delete('utm_term');
+    params.delete('utm_content');
 
-    params.delete("ck_subscriber_id");
+    params.delete('ck_subscriber_id');
 
     if (Array.from(params).length) {
       return `${location.origin}${location.pathname}?${params}`;
@@ -22,14 +22,14 @@
       document.querySelector('meta[property="twitter:title"]')?.content ??
       document.querySelector('meta[property="og:title"]')?.content ??
       document
-        .querySelector("web-share-wrapper[sharetext]")
-        ?.getAttribute("sharetext");
+        .querySelector('web-share-wrapper[sharetext]')
+        ?.getAttribute('sharetext');
 
     if (metaTitle) {
       return metaTitle;
     }
 
-    return document.querySelector("title").textContent?.trim() ?? "";
+    return document.querySelector('title').textContent?.trim() ?? '';
   }
 
   function getImage() {
@@ -59,13 +59,13 @@
   console.log(imageSrc);
   console.log(twitterHandle);
 
-  var host = "https://theproblemsolver.azurewebsites.net";
+  var host = 'https://theproblemsolver.azurewebsites.net';
   //var host = 'http://localhost:32662';
   document.body.appendChild(
-    document.createElement("script")
+    document.createElement('script')
   ).src = `${host}/Api/BookieBookie?url=${url}&title=${title}&image=${imageSrc}&by=${twitterHandle}`;
 
-  document.body.appendChild(document.createElement("style")).textContent = `
+  document.body.appendChild(document.createElement('style')).textContent = `
 /* The snackbar - position it at the bottom and in the middle of the screen */
 #snackbar {
     visibility: hidden; /* Hidden by default. Visible on click */
@@ -80,6 +80,8 @@
     z-index: 999; /* Add a z-index if needed */
     left: 50%; /* Center the snackbar */
     bottom: 30px; /* 30px from the bottom */
+    font-size: 16px;
+    border-radius: 12px;
 }
 
 /* Show the snackbar when clicking on a button (class added with JavaScript) */
@@ -114,12 +116,12 @@ However, delay the fade out process for 2.5 seconds */
 }
   `;
 
-  var div = document.body.appendChild(document.createElement("div"));
-  div.textContent = "Bookie bookie Saved";
-  div.id = "snackbar";
-  div.className = "show";
+  var div = document.body.appendChild(document.createElement('div'));
+  div.textContent = 'Bookie bookie Saved';
+  div.id = 'snackbar';
+  div.className = 'show';
   setTimeout(function () {
-    div.className = div.className.replace("show", "");
+    div.className = div.className.replace('show', '');
   }, 3000);
 };
 
