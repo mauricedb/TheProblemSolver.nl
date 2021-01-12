@@ -37,14 +37,14 @@
       document.querySelector('meta[name="twitter:image"]')?.content ??
       document.querySelector('meta[name="twitter:image:src"]')?.content ??
       document.querySelector('meta[property="og:image"]')?.content ??
-      null;
+      '';
 
     return metaImage;
   }
 
   function getTwitterHandle() {
     const metaImage =
-      document.querySelector('meta[name="twitter:creator"]')?.content ?? null;
+      document.querySelector('meta[name="twitter:creator"]')?.content ?? '';
 
     return metaImage;
   }
