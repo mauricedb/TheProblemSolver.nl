@@ -49,21 +49,30 @@
     return metaImage;
   }
 
+  function getPublishedTime() {
+    const publishedTime =
+      document.querySelector('meta[name="article:published_time"]')?.content ?? '';
+
+    return publishedTime;
+  }
+
   const title = encodeURIComponent(getTitle());
   const url = encodeURIComponent(getPathFromLocation(document.location));
   const imageSrc = encodeURIComponent(getImage());
   const twitterHandle = encodeURIComponent(getTwitterHandle());
+  const publishedTime = encodeURIComponent(getPublishedTime());
 
   console.log(title);
   console.log(url);
   console.log(imageSrc);
   console.log(twitterHandle);
+  console.log(publishedTime);
 
   var host = 'https://theproblemsolver.azurewebsites.net';
   //var host = 'http://localhost:32662';
   document.body.appendChild(
     document.createElement('script')
-  ).src = `${host}/Api/BookieBookie?url=${url}&title=${title}&image=${imageSrc}&by=${twitterHandle}`;
+  ).src = `${host}/Api/BookieBookie?url=${url}&title=${title}&image=${imageSrc}&by=${twitterHandle}&published=${publishedTime}`;
 
   document.body.appendChild(document.createElement('style')).textContent = `
 /* The snackbar - position it at the bottom and in the middle of the screen */

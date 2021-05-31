@@ -28,7 +28,7 @@ namespace TheProblemSolver.Api
             return currentItems;
         }
 
-        public async Task<string> Get(string url, string title, string image, string by)
+        public async Task<string> Get(string url, string title, string image, string by, string published)
         {
             try
             {
@@ -40,7 +40,7 @@ namespace TheProblemSolver.Api
                     Url = shortUrl,
                     Image = image,
                     By = by,
-                    DateTime = DateTime.UtcNow
+                    DateTime = GetPublished(published)
                 });
 
                 return shortUrl;
@@ -50,6 +50,15 @@ namespace TheProblemSolver.Api
                 this.StatusCode(HttpStatusCode.InternalServerError);
                 return ex.ToString();
             }
+        }
+
+        private static DateTime GetPublished(string published) {
+
+            if (DateTime.TryParse(published, out var parsed)) {
+                return parsed;
+            }
+
+            return DateTime.UtcNow;
         }
 
         private static async Task<string> ShortenUrl4(string url)
