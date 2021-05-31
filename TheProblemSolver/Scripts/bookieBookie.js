@@ -51,7 +51,7 @@
 
   function getPublishedTime() {
     const publishedTime =
-      document.querySelector('meta[name="article:published_time"]')?.content ?? '';
+      document.querySelector('meta[property="article:published_time"]')?.content ?? '';
 
     return publishedTime;
   }
