@@ -52,9 +52,10 @@ namespace TheProblemSolver.Api
             }
         }
 
-        private static DateTime GetPublished(string published) {
-
-            if (DateTime.TryParse(published, out var parsed)) {
+        private static DateTime GetPublished(string published) 
+        {
+            DateTime parsed;
+            if (DateTime.TryParse(published, out parsed)) {
                 return parsed;
             }
 
