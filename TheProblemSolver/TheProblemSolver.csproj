@@ -317,6 +317,7 @@
     <Content Include="Global.asax" />
     <Content Include="master-cypress-in-15-minutes-a-day.pdf" />
     <Content Include="react-hooks-tips-only-the-pros-know-course.pdf" />
+    <Content Include="women-go-tech-2021.pdf" />
     <Content Include="Scripts\bookieBookie.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
