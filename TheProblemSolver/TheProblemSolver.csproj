@@ -397,7 +397,7 @@
     <Folder Include="static\js\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="docs\" />
+    <Folder Include="docs\advanced-react-typescript-2022.pdf" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
