@@ -390,14 +390,12 @@
     <Content Include="Views\Courses\Angular.cshtml" />
     <Content Include="Views\TheReactNewsletter\ReadingList.cshtml" />
     <Content Include="Views\Courses\TypeScriptForReactDevelopers.cshtml" />
+    <Content Include="docs\advanced-react-typescript-2022.pdf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="static\css\" />
     <Folder Include="static\js\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="docs\advanced-react-typescript-2022.pdf" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
