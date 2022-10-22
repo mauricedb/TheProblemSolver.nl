@@ -397,6 +397,9 @@
     <Folder Include="static\js\" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="docs\" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
