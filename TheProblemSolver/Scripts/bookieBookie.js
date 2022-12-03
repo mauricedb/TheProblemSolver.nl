@@ -47,13 +47,21 @@
     return metaImage;
   }
 
+  function addAt(handle) {
+    return handle.startsWith('@') ? handle : `@${handle}`;
+  }
+
+  function removeTwitter(handle) {
+    return handle.replace(/https?:\/\/twitter.com\//, '');
+  }
+
   function getTwitterHandle() {
-    const metaImage =
+    const metaCreator =
       document.querySelector('meta[name="twitter:creator"]')?.content ??
       document.querySelector('meta[property="twitter:creator"]')?.content ??
       '';
 
-    return metaImage;
+    return addAt(removeTwitter(metaCreator));
   }
 
   function getPublishedTime() {
