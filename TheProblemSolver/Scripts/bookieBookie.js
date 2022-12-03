@@ -19,6 +19,8 @@
 
   function getTitle() {
     const metaTitle =
+      document.querySelector('meta[name="twitter:title"]')?.content ??
+      document.querySelector('meta[name="og:title"]')?.content ??
       document.querySelector('meta[property="twitter:title"]')?.content ??
       document.querySelector('meta[property="og:title"]')?.content ??
       document
@@ -36,6 +38,9 @@
     const metaImage =
       document.querySelector('meta[name="twitter:image"]')?.content ??
       document.querySelector('meta[name="twitter:image:src"]')?.content ??
+      document.querySelector('meta[name="og:image"]')?.content ??
+      document.querySelector('meta[property="twitter:image:src"]')?.content ??
+      document.querySelector('meta[property="twitter:image"]')?.content ??
       document.querySelector('meta[property="og:image"]')?.content ??
       '';
 
@@ -44,14 +49,19 @@
 
   function getTwitterHandle() {
     const metaImage =
-      document.querySelector('meta[name="twitter:creator"]')?.content ?? '';
+      document.querySelector('meta[name="twitter:creator"]')?.content ??
+      document.querySelector('meta[property="twitter:creator"]')?.content ??
+      '';
 
     return metaImage;
   }
 
   function getPublishedTime() {
     const publishedTime =
-      document.querySelector('meta[property="article:published_time"]')?.content ?? '';
+      document.querySelector('meta[name="article:published_time"]')?.content ??
+      document.querySelector('meta[property="article:published_time"]')
+        ?.content ??
+      '';
 
     return publishedTime;
   }
